@@ -2,29 +2,30 @@
 const User = require("./User");
 const Post = require("./Post");
 const Comment = require("./Comment");
+const { start } = require("repl");
 // Define the relationships between the models
-hasMany(Post, {
+User.hasMany(Post, {
   foreignKey: "user_id", // Set up the foreign key relationship
 });
 
-belongsTo(User, {
+Post.belongsTo(User, {
   foreignKey: "user_id", // Set up the foreign key relationship
 });
 
-_belongsTo(User, {
+Comment.belongsTo(User, {
   foreignKey: "user_id", // Set up the foreign key relationship
 });
 
-_belongsTo(Post, {
+Comment.belongsTo(Post, {
   foreignKey: "post_id", // Set up the foreign key relationship
 });
 
-_hasMany(Comment, {
+Post.hasMany(Comment, {
   foreignKey: "post_id", // Set up the foreign key relationship
 });
 
-hasMany(Comment, {
+User.hasMany(Comment, {
   foreignKey: "user_id", // Set up the foreign key relationship
 });
 // Export the models
-export default { User, Post, Comment };
+module.exports= { User, Post, Comment };
