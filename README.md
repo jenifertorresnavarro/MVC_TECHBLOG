@@ -1,5 +1,5 @@
 
-# JENs MVC_TECHBLOG
+# Jenifer's Tech Blog
 
 
 ## Description 
