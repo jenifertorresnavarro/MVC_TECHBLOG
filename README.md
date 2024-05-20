@@ -1,4 +1,3 @@
-
 # Jenifer's Tech Blog
 
 
