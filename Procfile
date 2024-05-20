@@ -1,1 +1,0 @@
-web: node src/mvc_techblog.js
